@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="css/style.css" />
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>kickscrew cybermonday campaign website</title>
+	</head>
+
+	<body>
+		<div class="body-container">
+			<div class="header">
+				<img id="banner" src="cyber.jpg" alt="" width="100%">
+			</div>
+
+			<div>
+				<div class="pictag">
+					<a href="#"><img src="1.png"></a>
+					<a href="#"><img src="2.png"></a>
+					<a href="#"><img src="3.png"></a>
+				</div>
+				<input type="button" class="header-button" value="EXPLORE NOW">
+			</div>
+
+			<input id="text1" type="text" value="BFCM10">
+			<input id="text2" type="text" value="BFCMAPP15">
+
+			<div class="block-coupon">
+				<div class="block-title">SITEWIDE COUPONS 📣</div>
+				<div class="copy">Copied!</div>
+				<div class="block-button">
+					<button id="coupon1">
+						<img src="copy.png">
+						<span>BFCM10</span><br/>
+						<small>($10 OFF ORDERS)</small>
+					</button>
+					<button id="coupon2">
+						<img src="copy.png">
+						<span>BFCMAPP15</span><br/>
+						<small>($15 OFF APP ORDERS)</small>
+					</button>
+				</div>
+				<div class="shopnow"><a href="https://www.kickscrew.com/" target="blank">SHOP NOW</a></div>
+			</div>
+
+			<div class="block-deal">
+				<div class="block-title">DEAL CALENDAR 🗓️</div>
+				<div class="block-text">
+					<span>🔥 Discover a new collection daily with a limited amount of additional coupons!</span><br/>
+					<span>*Valid on orders over $170 - Code expires at usage limit*</span>
+				</div>
+			</div>
+
+			<div class="block-colab">
+				<div class="line1">
+					<div class="colab-bx airjordan">
+						<h4>November 26 / 27</h4>
+						<h2>Air Jordan Collection</h2>
+						<p>Copy codes below for $100 or $30 off collection products. While quantities last.</p>
+						<div class="b-shopnow"><a href="https://www.kickscrew.com/collections/air-jordan" target="blank">SHOP NOW</a></div>
+					</div>
+
+					<div class="colab-bx nb">
+						<h4>November 26 / 27</h4>
+						<h2>New Balance Collection</h2><br/>
+						<br/>
+						<div class="b-shopnow"><a href="https://www.kickscrew.com/collections/new-balance" target="blank">SHOP NOW</a></div>
+					</div>
+				</div>
+
+				<div class="line2">
+					<div class="colab-bx adidas" style="min-height: 272px">
+						<h4>November 27</h4>
+						<h2>Adidas Collection</h2><br/>
+						<div class="b-shopnow"><a href="https://www.kickscrew.com/collections/adidas" target="blank">SHOP NOW</a></div>
+					</div>
+					<div class="colab-bx nike" style="min-height: 272px">
+						<h4>November 27</h4>
+						<h2>Nike Collection</h2><br/>
+						<div class="b-shopnow"><a href="https://www.kickscrew.com/collections/nike" target="blank">SHOP NOW</a></div>
+					</div>
+					<div class="colab-bx ugg"style="min-height: 272px">
+						<h4>November 27</h4>
+						<h2>Ugg Collection</h2><br/>
+						<div class="b-shopnow"><a href="https://www.kickscrew.com/collections/ugg" target="blank">SHOP NOW</a></div>
+					</div>
+				</div>
+
+				<div class="block-giveaways">
+					<div class="block-title">GIVEAWAYS 🎁</div>
+					<div class="block-text">
+						<span>🔥 Win prizes valued over $20,000</span><br/>
+						<span>🔥 Earn 1 automatic entry with each order over $150</span><br/>
+						<span>🔥 Earn 1 extra entry by placing order through KICKS CREW App</span>
+					</div>
+				</div>
+			</div>
+	
+			<div class="gallery">
+				<div class="gallery-title">NEW ARRIVALS ✨</div>
+				<div class="slideshow">
+					<input class="left" id="left" type="button" value="&lt;">
+						<ul class="left">
+							<li><img src="gallery1.png"></li>
+							<li><img src="gallery2.png"></li>
+							<li><img src="gallery3.png"></li>
+							<li><img src="gallery4.png"></li>
+							<li><img src="gallery5.png"></li>
+							<li><img src="gallery6.png"></li>
+							<li><img src="gallery7.png"></li>
+						</ul>
+					<input class="left" id="right" type="button" value="&gt;">
+				</div>
+			</div>
+
+			<div class="footer">
+				<h3>DOWNLOAD</h3>
+				<h1>THE CREW APP</h1>
+				<div class="footerlogo">
+					<img src="appstore-logo.png">
+					<img src="qrcode.png">
+				</div>
+			</div>
+
+			<div id="back-top">
+				Back to top 
+				<span class="rocket">🚀</span>
+			</div>
+		</div>
+		
+	</body>
+
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function ()  {
+
+		$("#coupon1").click(function ()  {
+		var copyText = $("#text1");
+		copyText.select();
+		document.execCommand('copy');
+		$(".copy").fadeIn().delay(1000).fadeOut();
+		});
+
+		$("#coupon2").click(function ()  {
+		$(".copy").fadeIn().delay(1000).fadeOut();
+		});
+
+		$('#copyButton').click(function() {
+		var copyText = $('#copyTarget');
+		copyText.select();
+		document.execCommand('copy');
+		});
+
+		$(".header-button").click(function ()  {
+		$("html, body").animate({scrollTop: $(".block-coupon").offset().top}, 1000);
+		});
+
+		$("#left").click(function () {
+		target=$("ul li:first");
+		$("ul").append(target);
+		});
+
+		$("#right").click(function () {
+		target=$("ul li:last");
+		$("ul").prepend(target);
+		});
+
+		var btn = $("#back-top");
+		$(window).scroll(function () {
+		$(this).scrollTop() > 100 ? btn.fadeIn() : btn.fadeOut();
+		});
+
+		btn.click(function () {
+		$("html, body").animate({scrollTop: 0}, 1000);
+		$(".rocket").addClass("fly");
+
+		setTimeout(function () {
+			$(".rocket").removeClass("fly");
+		}, 1000);
+
+		return false;
+		});
+
+		const funs = new Funs();
+		funs.signature();
+
+	});
+
+	</script>
+
+
+</html>

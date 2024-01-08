@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,700&display=swap');
+
+html {
+    font-family: 'Inter', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: black;
+    height: auto;
+    margin: 0;
+
+}
+
+.header {
+    position: relative;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+}
+
+#banner {
+    width: 100%;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 6px 20px #E8CDF9; 
+    margin-bottom: 2rem;
+}
+
+.pictag {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0.5rem 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.pictag img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin:0 2rem 1rem;
+}
+
+.header-button {
+    display: block;
+    background-color: #E8CDF9;
+    color: #230D4C;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 12px 250px;
+    font-size: 14px;
+    margin: auto;
+    cursor: pointer;
+}
+
+.block-coupon {
+    background-color: #1d1d1d;
+    color:white;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    height: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.block-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0.5rem;
+}
+
+.copy {
+    display: none;
+    background-color: #E8CDF9;
+    opacity: 60%;
+    color: #230D4C;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    width: 95%;
+    margin: auto;
+}
+
+.block-button {
+    display: flex;
+    justify-content: center;
+}
+
+.block-coupon img {
+    height:22px;
+}
+
+.block-coupon button {
+    background-color: white;
+    opacity: 90%;
+    color:black;
+    border-style: none;
+    border-radius: 14px;
+    height:70px;
+    font-size: 14px;
+    width: 49%;
+    padding: 0 1rem;
+    margin: 0.5rem;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: background-color 1s;
+}
+
+.block-coupon button:hover {
+    background-color: #8216DB;
+    border: 1px solid white;
+    cursor: pointer;
+    color:white;
+    box-shadow:0px 0px 6px #E8CDF9;  ;
+}
+
+.shopnow {
+    background-color: #E8CDF9;
+    color: #230D4C;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 12px 1rem;
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+#text1 {
+    display: none;
+}
+
+#text2 {
+    display: none;
+}
+
+.block-deal {
+    background-color: #1d1d1d;
+    color:white;
+    margin: 3rem 2rem;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    height: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.block-text {
+    line-height: 2rem;
+}
+
+.block-colab {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 3rem 2rem;
+}
+
+.colab-bx {
+    background-size: 150%;
+    min-height: 378px;
+    background-position: 50% 60%;
+    background-repeat:repeat;
+    border:1px solid #1d1d1d;
+    width: 100%;
+    height: auto;
+    padding: 1rem 1.5rem;
+}
+
+.line1 {
+    display:flex;
+    gap: 1.5rem;
+}
+
+.line2 {
+    display: inline-flex;
+    gap: 1.5rem;
+}
+
+.airjordan {
+    background-image:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,0)),url("aj2.jpeg");
+    color:white;
+    border-radius: 14px;
+}
+
+.nb {
+    background-image:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,0)),url("newbalance.jpeg");
+    color:white;
+    border-radius: 14px;
+}
+
+.adidas {
+    background-image:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,0)),url("adidas.jpeg");
+    color:white;
+    border-radius: 14px;
+}
+
+.nike {
+    background-image:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,0)),url("nike.jpeg");
+    color:white;
+    border-radius: 14px;
+}
+
+.ugg {
+    background-image:linear-gradient(rgba(0,0,0,.85),rgba(0,0,0,0)),url("ugg.jpeg");
+    color:white;
+    border-radius: 14px;
+}
+
+.line1 .b-shopnow {
+    background-color: #E8CDF9;
+    color: #230D4C;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 12px 1rem;
+    font-size: 14px;
+    margin-top: 210px;
+    text-align: center;
+}
+
+.line2 .b-shopnow {
+    background-color: #E8CDF9;
+    color: #230D4C;
+    font-weight: bold;
+    border-radius: 14px;
+    padding: 12px 1rem;
+    font-size: 14px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.block-giveaways {
+    background-color: #1d1d1d;
+    color:white;
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+    height: auto;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.gallery {
+    background-image: url("bg.png");
+    color:white;
+    padding: 1rem 0.5rem;
+    border-radius: 12px;
+    height: 350px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-shadow: 0 -6px 25px 0px #E8CDF9; 
+}
+
+.slideshow {
+    display: inline-flex;
+}
+
+.gallery ul {
+    overflow: hidden;
+    height: 270px;
+    width: 92%;
+}
+
+.gallery li {
+    display: inline;
+}
+
+.gallery input {
+    margin-top: 125px;
+    height: 50px;
+    width: 30px;
+    border: #1d1d1d 2px solid;
+    background-color: #E8CDF9;
+    color: #230D4C;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.gallery input:hover {
+    box-shadow:0px 0px 10px #E8CDF9; 
+}
+
+.gallery img {
+    height: 270px;
+    width: 200px;
+}
+
+.left {
+    float: left;
+}
+
+.gallery-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0.5rem;
+
+}
+
+.footer {
+    margin: 3.5rem;
+    color:white;
+    text-align: center;
+    line-height: 20px;
+}
+
+.footerlogo {
+    display: inline-flex;
+    margin: 1rem;
+    justify-content: center;
+}
+
+.footerlogo img {
+    height: 130px;
+    margin: 0 1rem;
+    border: #1d1d1d 1px solid;
+}
+
+#back-top {
+    position: fixed;
+    bottom: 0;
+    left: 1%;
+    z-index: 1000;
+    display: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    background: #1d1d1d;
+    padding: 1rem;
+    opacity: 80%;
+}
+
+.fly {
+    position: absolute;
+    animation: launch ease-in-out 3s infinite;
+    -webkit-animation: launch ease-in-out 3s infinite
+}
+
+@-webkit-keyframes launch {
+    100% {
+        transform: translateY(-800px) translateX(800px);
+    }
+}
+@keyframes launch {
+    100% {
+        transform: translateY(-800px) translateX(800px);
+    }
+}
