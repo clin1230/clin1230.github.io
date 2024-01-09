@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<link rel="stylesheet" href="css/animate.min.css" />
+	<link rel="stylesheet" href="css/home.css" />
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+		<header>
+			<div class="nav container">
+				<span class="logo">Trio foodprint</span>
+				<ul class="bar">
+					<a href="http://127.0.0.1/blog/foodblog.html">Home</a>
+					<a href="http://127.0.0.1/blog/foodblog%20articles.html">Articles</a>
+					<a href="http://127.0.0.1/blog/foodblog.contact.html">Contact Us</a>
+				</ul>
+				<div class="search-container">
+					<input type="text" id="s" value="" placeholder="Search">
+					<button type="submit"><img src="img/searchicon.png"></button>
+				</div>
+			</div>
+		</header>
+
+		<section class="home" id="home">
+			<div class="home-text container">
+				<h2 class="home-title animate__animated">Food Blogger</h2>
+				<span class="home-subtitle">三個愛吃女生的美食日記 | 台北.台中美食</span>
+
+			</div>
+		</section> 
+
+		<div class="category">
+			<div id="tech"><a href="#">Tech</a></div>
+			<div id="food"><a href="#">Food</a></div>
+			<div id="news"><a href="#">News</a></div>
+		</div>
+
+
+		<section class="about container" id="about">
+			<div class="contentbx">
+				<h2 class="titletexth2">Catch up with latest articles</h2>
+				<p class="titletextp">
+					Welcome to the ultimate Taipei-Taichung Food Adventure! 🍜🥢 If you're a fellow foodie seeking the latest and greatest culinary experiences, you're in the right place. We're here to catch up with all the trending topics in the vibrant gastronomic scenes of Taipei and Taichung.
+				</p>
+				<a href="http://127.0.0.1/blog/foodblog%20articles.html" class="btn2">Read more</a>
+
+			</div>
+			<div class="imgbx">
+				<img src="img/trio.png" alt="" class="fitbg">
+			</div>
+
+		</section>
+
+
+		<footer>
+			<div class="footercontainer">
+
+				<div class="aboutus">
+					<h2>About Us</h2>
+					<p>三個愛吃女生的美食日記</p>
+					<ul class="sci">
+						<li><a href="#"><img src="img/facebook-logo-24.png" style="height:40px" /></a></li>
+						<li><a href="https://www.instagram.com/trio_foodprint/" target="blank"><img src="img/instagramicon.png" style="height:40px" /></a></li>
+						<li><a href="#"><img src="img/twitter-logo-24.png" style="height:40px" /></a></li>
+						<li><a href="#"><img src="img/tiktok-logo-24.png" style="height:40px" /></a></li>
+					</ul>
+				</div>
+
+				<div class="quicklinks">
+					<h2>Quick Links</h2>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</div>
+
+				<div class="contactbx">
+					<h2>Contact Info</h2>
+					<ul class="info">
+						<li>
+							<span>6444 London street <br> Brighton PA 33445 <br> UK</span>
+						</li>
+						<li>
+							<span style="margin:0 5px"><img src="envelopeicon.png" style="height:20px"></span>
+							<span><a href="malito:triofoodprint@gmail.com">triofoodprint@gmail.com</a></span>
+						</li>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function ()  {
+
+			$(".btn2").mouseover(function () {
+				$(this).addClass("btn2plus");
+			});
+
+			$(".btn2").mouseout(function () {
+				$(this).removeClass("btn2plus");
+			});
+
+			$(".home-title").mouseover(function () {
+				$(this).addClass("animate__bounce");
+			});
+
+			$(".home-title").mouseout(function () {
+				$(this).removeClass("animate__bounce");
+			});
+
+		});
+
+
+	</script>
+
+
+</html>

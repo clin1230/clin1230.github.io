@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+	<link rel="stylesheet" href="css/contact.css">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+	</head>
+
+	
+	<body>
+
+		<header>
+			<div class="nav container">
+				<span class="logo">Trio foodprint</span>
+				<ul class="bar">
+					<a href="http://127.0.0.1/blog/foodblog.html">Home</a>
+					<a href="http://127.0.0.1/blog/foodblog%20articles.html">Articles</a>
+					<a href="#">Contact Us</a>
+				</ul>
+				<div class="search-container">
+					<input type="text" id="s" value="" placeholder="Search">
+					<button type="submit"><img src="searchicon.png"></button>
+				</div>
+			</div>
+		</header>
+
+
+		<section class="home" id="home">
+			<div class="home-text container">
+				<h2 class="home-title">Food Blogger</h2>
+				<span class="home-subtitle">三個愛吃女生的美食日記 | 台北.台中美食</span>
+			</div>
+		</section> 
+
+
+		<section class="content">
+			<div class="intro">
+				<div class="name1">
+					<div><img src="151.png"></div>
+					<div class="introtext">
+						<h2>Name</h2>
+						<p>"Hello world! I'm a passionate explorer of ideas and a perpetual learner. Whether it's diving into the depths of literature or unraveling the mysteries of code, I thrive on the exhilarating journey of discovery. Let's embark on this intellectual adventure together!"</p>	
+					</div>
+				</div>
+
+				<div class="name2">
+					<div><img src="196.png"></div>
+					<div class="introtext">
+						<h2>Name</h2>
+						<p>"Greetings Earthlings! I'm a dreamer, a doer, and a firm believer in the power of positivity. With a heart that beats for creativity and a mind that dances with curiosity, I'm on a mission to make every moment count. Join me in this cosmic ride through life!"</p>
+					</div>
+				</div>
+
+				<div class="name3">
+					<div><img src="700.png"></div>
+					<div class="introtext">
+						<h2>Name</h2>
+						<p>"Hey there! I'm a coffee enthusiast, a bookworm, and an eternal optimist. In the grand symphony of existence, I play the notes of joy and laughter. Life's too short for dull moments, so let's grab a cup of coffee, flip through some pages, and sprinkle a little happiness wherever we go!"</p>
+					</div>
+				</div>
+			</div>	
+			
+			<div class="comment">
+				<h2>Let's get in touch</h2>
+				<p>Comment below if you want to ask us any quesitions or see our review for certain restaurants!</p>
+					<form action="index.py" method="post">
+						<label>Your name</label><br/>
+						<input type="text" id="fname" name="fname" placeholder="Enter your name"><br/>
+
+						<label>Your email</label><br/>
+						<input type="email" id="email" name="email" placeholder="Enter your email"><br/>
+
+						<label>Your message</label><br/>
+						<textarea type="text" id="comment" name="comment" placeholder="Type your comment here"></textarea><br/>
+					</form>
+					<input id="btn" type="button" value="Click">
+			</div>
+		</section>
+
+
+		<footer>
+			<div class="footercontainer">
+
+				<div class="aboutus">
+					<h2>About Us</h2>
+					<p>三個愛吃女生的美食日記</p>
+					<ul class="sci">
+						<li><a href="#"><img src="facebook-logo-24.png" style="height:40px" /></a></li>
+						<li><a href="https://www.instagram.com/trio_foodprint/" target="blank"><img src="instagramicon.png" style="height:40px" /></a></li>
+						<li><a href="#"><img src="twitter-logo-24.png" style="height:40px" /></a></li>
+						<li><a href="#"><img src="tiktok-logo-24.png" style="height:40px" /></a></li>
+					</ul>
+				</div>
+
+				<div class="quicklinks">
+					<h2>Quick Links</h2>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</div>
+
+				<div class="contactbx">
+					<h2>Contact Info</h2>
+					<ul class="info">
+						<li>
+							<span><i class="fa fa-map-marker"></i></span>
+							<span>6444 London street <br> Brighton PA 33445 <br> UK</span>
+						</li>
+						<li>
+							<span style="margin:0 5px"><img src="envelopeicon.png" style="height:20px"></span>
+							<span><a href="malito:triofoodprint@gmail.com">triofoodprint@gmail.com</a></span>
+						</li>
+				</div>
+
+
+
+			</div>
+		</footer>
+	</body>
+
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function ()  {
+
+		$("#btn").click(function(){
+			$.post("comment.py",
+			{
+				fname:$('#fname').val(),
+				email:$('#email').val(),
+				comment:$('#comment').val()
+			},
+			function(data){
+				alert("Your comment has been submitted!");
+			});
+		});
+
+	});
+
+
+
+	</script>
+
+
+</html>

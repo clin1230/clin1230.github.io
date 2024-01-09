@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+	<link rel="stylesheet" href="css/article.css" >
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+	</head>
+
+	
+	<body>
+
+		<header>
+			<div class="nav container">
+				<span class="logo">Trio foodprint</span>
+				<ul class="bar">
+					<a href="http://127.0.0.1/blog/foodblog.html">Home</a>
+					<a href="http://127.0.0.1/blog/foodblog%20articles.html">Articles</a>
+					<a href="http://127.0.0.1/blog/foodblog.contact.html">Contact Us</a>
+				</ul>
+				<div class="search-container">
+					<input type="text" id="s" value="" placeholder="Search">
+					<button type="submit"><img src="searchicon.png"></button>
+				</div>
+			</div>
+		</header>
+
+
+		<section class="home" id="home">
+			<div class="home-text container">
+				<h2 class="home-title">Food Blogger</h2>
+				<span class="home-subtitle">三個愛吃女生的美食日記 | 台北.台中美食</span>
+			</div>
+		</section> 
+
+
+		<div class="postfilter container">
+			<span class="">All</span>
+			<span class="filteritem">Tech</span>
+			<span class="filteritem">Food</span>
+			<span class="filteritem">News</span>
+
+		</div>
+
+
+
+		<div class="postbx tech template">
+			<img src="photo.png" alt="" class="postimg">
+			<h2 class="category"></h2>
+			<a href="#" no="" class="posttitle"></a>
+			<span class="postdate"></span>
+			<p class="postdescription"></p>
+			<div class="profile">
+					<img src="" alt="" class="profileimg">
+					<span class="profilename">Ina</span>
+			</div>
+		</div>
+
+
+		<div id="content" class="content">
+			<div id="postContainer" class="post container">
+
+
+			</div>	
+		</div>
+
+
+
+		<div id="article" class="none">
+			<div class="article-box">
+				<img src="photo.png" alt="" class="one-postimg">
+				<h2 class="one-category"></h2>
+				<h1 class="one-posttitle"></h1>
+				<span class="one-postdate"></span>
+				<p class="one-postdescription"></p>
+				<input id="exit" type="button" value="close">
+			</div>
+		</div>
+
+
+
+
+		<div class="buttoncontainer">
+			<ul class="page">
+				<li class="page_numbers">1</li>	
+			</ul>
+		</div>
+
+
+		<footer>
+			<div class="footercontainer">
+
+				<div class="aboutus">
+					<h2>About Us</h2>
+					<p>三個愛吃女生的美食日記</p>
+					<ul class="sci">
+						<li><a href="#"><img src="facebook-logo-24.png" style="height:40px" /></a></li>
+						<li><a href="https://www.instagram.com/trio_foodprint/" target="blank"><img src="instagramicon.png" style="height:40px" /></a></li>
+						<li><a href="#"><img src="twitter-logo-24.png" style="height:40px" /></a></li>
+						<li><a href="#"><img src="tiktok-logo-24.png" style="height:40px" /></a></li>
+					</ul>
+				</div>
+
+				<div class="quicklinks">
+					<h2>Quick Links</h2>
+					<ul>
+						<li><a href="#">Home</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+				</div>
+
+				<div class="contactbx">
+					<h2>Contact Info</h2>
+					<ul class="info">
+						<li>
+							<span><i class="fa fa-map-marker"></i></span>
+							<span>6444 London street <br> Brighton PA 33445 <br> UK</span>
+						</li>
+						<li>
+							<span style="margin:0 5px"><img src="envelopeicon.png" style="height:20px"></span>
+							<span><a href="malito:triofoodprint@gmail.com">triofoodprint@gmail.com</a></span>
+						</li>
+				</div>
+			</div>
+		</footer>
+
+
+	</body>
+
+
+
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).ready(function ()  {
+
+
+		$.post("page.py",
+		{
+			currentpage:1,
+			itemperpage:5
+		},
+		function(data){
+			//alert(data);
+			els=$(".page_numbers").clone();
+			$(".page").empty();
+			page=parseInt(data);
+			for (var i =1; i < page+1; i++) {
+				//alert(i);
+				$(".page").append(els.clone().text(i));
+			}	
+		});	
+
+
+		$.post("foodblog.py",
+		{
+			currentpage:1,
+			itemperpage:5,
+		},
+		function(data){
+			$("#postContainer").empty();
+			result=eval(data);
+			result.forEach(function(article) {
+				el=$(".template").clone().removeClass("template");
+				//alert(article.number);
+				el.find(".posttitle").attr("no",article.number);
+				el.find(".category").text(article.category);
+				el.find(".posttitle").text(article.title);
+				el.find(".postdate").text(article.date);
+				el.find(".postdescription").text(article.description);
+				el.find(".postimg").attr("src",article.image);
+				$("#postContainer").append(el);
+			});
+		});	
+
+	
+
+		$("#postContainer").on("mouseover",".postbx",function ()  {
+			//alert(1);
+			$(this).addClass("w120");
+		});
+
+		$("#postContainer").on("mouseout",".postbx",function ()  {
+			$(this).removeClass("w120");
+		});
+
+
+		$(".page").on("click","li", function() {
+			//alert($(this).text());
+			$.post("foodblog.py",
+			{
+				currentpage:$(this).text(),
+				itemperpage:5,
+			},
+			function(data){
+				$("#postContainer").empty();
+				result=eval(data);
+				result.forEach(function(article) {
+					el=$(".template").clone().removeClass("template");
+					el.find(".category").text(article.category);
+					el.find(".posttitle").text(article.title);
+					el.find(".postdate").text(article.date);
+					el.find(".postdescription").text(article.description);
+					el.find(".postimg").attr("src",article.image);
+					$("#postContainer").append(el);
+				});
+			});			
+		});
+
+
+		$(".filteritem").click(function ()  {
+			//alert($(this).text());
+			$.post("category.py",
+			{
+				filteritem:$(this).text(),
+				itemperpage:5,
+			},
+			function(data){
+				$("#postContainer").empty();
+				result=eval(data);
+				result.forEach(function(article) {
+					el=$(".template").clone().removeClass("template");
+					el.find(".posttitle").attr("no",article.number);
+					el.find(".category").text(article.category);
+					el.find(".posttitle").text(article.title);
+					el.find(".postdate").text(article.date);
+					el.find(".postdescription").text(article.description);
+					el.find(".postimg").attr("src",article.image);
+					$("#postContainer").append(el);
+				});
+			});			
+		});
+
+
+		$("#postContainer").on("click",".posttitle", function() {
+			//alert($(this).attr("no"));
+			$.post("article.py",
+			{
+				postnumber:$(this).attr("no"),
+			},
+			function(data){
+				result=eval(data);
+				result.forEach(function(onearticle) {
+					//alert(onearticle.title);
+					el=$("#article");
+					el.find(".one-category").text(onearticle.category);
+					el.find(".one-posttitle").text(onearticle.title);
+					el.find(".one-postdate").text(onearticle.date);
+					el.find(".one-postdescription").text(onearticle.description);
+					el.find(".one-postimg").attr("src",onearticle.image);
+					$("#article").removeClass("none");
+				});
+			});			
+		});
+
+
+		$("#exit").click(function () {
+			$(this).parent().parent().addClass("none");
+		});
+
+
+	});
+
+
+	</script>
+</html>

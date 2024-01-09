@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,700&display=swap');
+		* {
+			font-family: 'Poppins', sans-serif;
+			scroll-behavior: smooth;
+			scroll-padding-top: 2rem;
+		}
+
+		/*:root {
+			background:black;
+		}
+
+		::selection {
+			color:var(background-color);
+
+		}*/
+
+		section {
+			padding: 3rem 0 2rem;
+		}
+
+		.container {
+			margin: auto;
+			width: 100%;
+			align-items: center;
+			height: auto;
+		}
+
+		/* Header */
+
+		header {
+			position: fixed;
+			top:0;
+			left: 0;
+			width: 100%;
+			z-index: 200;
+			box-shadow: 0 1px 2px grey;
+		}
+
+		.nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 10px 20px;
+			background-color: white;
+			width: auto;
+		}
+
+
+		.logo {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: black;
+		}
+
+		.bar a {
+			text-decoration:none;
+			background:#bbeaff;
+			color:white;
+			padding:5px 10px;
+			border-radius:15px;
+			margin:0 3px;
+		}	
+
+		#s {
+			font-family: 'Poppins', sans-serif;
+			margin-bottom: 0.5rem;
+		}
+
+		.search-container button {
+			border: solid 1.5px lightgray;
+			border-radius: 25%;
+			width: 50px;
+			height: 30px;
+		}
+
+		.search-container button img{
+			width: 25px;
+		}
+
+
+		.home {
+			min-height: 400px;
+			display: grid;
+			justify-content: center;
+			align-items: center;
+			background: url("bg.png");
+			margin-bottom: 2rem;
+		}
+
+		.home-text {
+			text-align: center;
+		}
+
+		.home-title {
+			font-size: 3.5rem;
+		}
+
+		.home-subtitle {
+			font-size: 1.2rem;
+			font-weight: 400;
+		}
+
+		.category {
+			margin:auto;
+			display: flex;
+			width: 90%;
+			justify-content: space-between;
+		}
+
+		#tech, #food, #news {
+			border: 1px solid gray;
+			margin: 2rem;
+			height: 300px;
+			font-size: 30px;
+			font-weight: bold;
+			width: 300px;
+			opacity: 70%;
+			color: black;
+			text-align: center;
+			box-shadow: 0 6px 10px #bbeaff;
+		}
+
+		#tech {
+			background-image: url("tech.png");
+			background-size: 150%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		#food {
+			background-image: url("food.jpeg");
+			background-size: 150%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		#news {
+			background-image: url("news.jpeg");
+			background-size: 150%;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.about {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: auto;
+		}
+
+		.about .contentbx {
+			max-width: 50%;
+			width: 50%;
+			text-align: left;
+			padding:0 40px;
+		}
+
+
+		.titletexth2 {
+			font-weight: 600;
+			color: #111;
+			font-size: 2rem;
+			margin-bottom: 10px;
+		}
+
+		.titletextp {
+			color: #111;
+			font-size: 1rem;
+		}
+
+
+		.about .imgbx {
+			position: relative;
+			min-width: 50%;
+			width: 50%;
+			min-height: 500px;
+		}
+
+		.btn2 {
+			position: relative;
+			display: inline-block;
+			margin-top: 30px;
+			padding: 10px 30px;
+			background: white;
+			border: 1px solid black;
+			color: #333;
+			transition: .5s;
+		}
+
+		footer {
+			position: relative;
+			width: 100%;
+			height: auto;
+			padding: 10px 10px;
+			background: black;
+		}
+
+		.footercontainer {
+			display: flex;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			flex-direction: row;
+		}
+
+		.footercontainer h2 {
+			position: relative;
+			color: white;
+			margin-bottom: 15px;
+		}
+
+		footer p {
+			color:white;
+		}
+
+		.sci {
+			display: flex;
+		}
+
+		.sci li {
+			list-style: none;
+		}
+
+
+		.sci li a {
+			display: inline-block;
+			width: 40px;
+			height: 40px;
+			background: #222;
+			justify-content: center;
+			align-items: center;
+			margin-right: 10px;
+			text-decoration: none;
+			border-radius: 4px;
+			transition: 0.5s;
+		}
+
+		.sci li a:hover {
+			background: #bbeaff;
+		}			
+
+		.quicklinks ul li {
+			list-style: none;
+		}
+
+		.quicklinks ul li a {
+			color: #999;
+			text-decoration: none;
+			margin-bottom: 10px;
+			display: flex;
+			transition: 0.3s;
+		}
+
+		.quicklinks ul li a:hover {
+			color: white;
+		}
+
+		.contactbx .info {
+			position: relative;
+		}
+
+		.contactbx .info li {
+			display: flex;
+			margin-bottom: 16px;
+		}
+
+		.contactbx .info li span {
+			color: #999;
+		}
+
+		.contactbx .info li a {
+			color: #999;
+			text-decoration: none;
+		}
+
+		.contactbx .info li a:hover {
+			color: white;
+		}
+
+		
